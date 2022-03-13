@@ -43,15 +43,10 @@ const Key = (props: { name: string }) => {
 };
 
 export function Keys(props: { initialData: IItem[]; sorting: 'ASC' | 'DESC' }) {
-    /*const editName = (evt: any): void => {
-
-        console.log(evt.target.innerHTML);
-    }*/
     let list: IItem[] = props.initialData.concat();
     let newList: IItem[] = props.initialData.concat();
     newList.reverse();
     list = props.sorting === 'ASC' ? list : newList;
-    //let list = props.initialData.reverse();
 
     return (
         <div>
@@ -61,13 +56,3 @@ export function Keys(props: { initialData: IItem[]; sorting: 'ASC' | 'DESC' }) {
         </div>
     );
 }
-
-//onClick={editName}
-//onClick={(e) => {}}; фокус на е в коде высветится тип
-
-//<div key={item.name}>{item.name}</div>
-
-/*
-<input type="text" value={props.name || ""}/>
-            <div>{props.name}</div>
-            */
